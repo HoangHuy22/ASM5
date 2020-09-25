@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="JsonUWP.Pages.Carts"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JsonUWP.Pages"
+    xmlns:models="using:JsonUWP.Model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <RelativePanel>
+        <ListView x:Name="CartItems">
+            <ListView.Header>
+                <TextBlock Text="Cart" FontSize="20" FontWeight="SemiBold" Margin="20,50,0,0"/>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:CartItem">
+                    <ListViewItem Margin="0,0,0,20">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="100"/>
+                                <ColumnDefinition Width="400"/>
+                                <ColumnDefinition Width="80"/>
+                                <ColumnDefinition Width="100"/>
+                            </Grid.ColumnDefinitions>
+                            <FontIcon Tapped="Btn_delete" Grid.Column="0" HorizontalAlignment="Center" FontFamily="{StaticResource SymbolThemeFontFamily}" Glyph="&#xE8BB;"/>
+                            <Image Grid.Column="1" Width="80" VerticalAlignment="Center" Margin="10,10,0,0" Source="{x:Bind image}"/>
+                            <TextBlock Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center" Text="{x:Bind name}"/>
+                            <TextBlock Grid.Column="3" HorizontalAlignment="Center" Text="{x:Bind price}" VerticalAlignment="Center"/>
+                            <TextBox Grid.Column="4" TextChanged="TextBox_TextChanged" Tag="{Binding}" HorizontalAlignment="Center" Width="80" Height="30" Text="{x:Bind qty}"/>
+                        </Grid>
+                    </ListViewItem>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Content="Remove All" RelativePanel.Below="CartItems" Click="DeleteAll" Margin="0,20,0,0" Width="100" Height="30"/>
+    </RelativePanel>
+</Page>

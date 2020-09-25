@@ -1,0 +1,50 @@
+﻿<Page
+    x:Class="JsonUWP.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:JsonUWP"
+    xmlns:models="using:JsonUWP.Model"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <SplitView Background="#f0f0f0" PaneBackground="#292728" OpenPaneLength="200" DisplayMode="Inline" IsPaneOpen="True">
+        <SplitView.Pane>
+            <ListView Margin="0,50,0,0" x:Name="MN">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="models:MenuItem">
+                        <ListViewItem Padding="20,5,20,5" Tapped="ListViewItem_Tapped">
+                            <Grid VerticalAlignment="Center">
+                                <Image Width="40" Height="40" HorizontalAlignment="Left" Source="{x:Bind icon}"/>
+                                <TextBlock Foreground="White" VerticalAlignment="Center" Margin="50,0,0,0" Text="{x:Bind name}"/>
+                            </Grid>
+                        </ListViewItem>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </SplitView.Pane>
+        <SplitView.Content>
+            <Grid BorderBrush="#b10837" BorderThickness="0,15,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="130"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <RelativePanel Grid.Row="0" x:Name="AppTop">
+                    <Image x:Name="Logo" Margin="25,-1,0,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="100" Height="120" Source="Assets/logo.png"/>
+                    <TextBlock RelativePanel.RightOf="Logo" Margin="15,10,0,0" Text="Xin chào, đây là ứng dụng mua thực phẩm"/>
+                    <RelativePanel Margin="0,10,0,0" Width="160" RelativePanel.AlignRightWithPanel="True">
+                        <FontIcon x:Name="Alert" Tapped="Alert_Tapped" FontFamily="Segoe MDL2 Assets" Glyph="&#xE80F;"/>
+                        <FontIcon Margin="20,0,0,0" RelativePanel.RightOf="Alert" Tapped="Setting_Tapped" x:Name="Setting" FontFamily="Segoe MDL2 Assets" Glyph="&#xE7BF;"/>
+                        <FontIcon Margin="20,0,0,0" RelativePanel.RightOf="Setting" Tapped="FontIcon_Tapped" x:Name="ShutDown" FontFamily="Segoe MDL2 Assets" Glyph="&#xEB51;"/>
+                        <TextBlock x:Name="CartNumber" Text="0" FontSize="15" FontWeight="SemiBold" Foreground="Red" RelativePanel.RightOf="Setting"/>
+                    </RelativePanel>
+                </RelativePanel>
+                <ScrollViewer Grid.Row="1" Margin="10" Loaded="ScrollViewer_Loaded">
+                    <Frame x:Name="MainFrame"/>
+                </ScrollViewer>                     
+            </Grid>
+
+        </SplitView.Content>
+    </SplitView>
+</Page>

@@ -1,0 +1,1 @@
+C:\Users\G7\Documents\JsonUWP\JsonUWP\JsonUWP.csproj;x86
