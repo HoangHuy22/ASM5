@@ -55,5 +55,65 @@ namespace JsonUWP.Pages
             Product detail = ProductList.SelectedItem as Product;
             MainPage.mainFrame.Navigate(typeof(ProductDetail), detail);
         }
+
+        private ProductServices _productServices = new ProductServices();
+
+        private async void Btn_search_Click(object sender, RoutedEventArgs e)
+        {
+            List<Product> listSearch = new List<Product>();
+            ProductList productList = await _productServices.TodaySpecial();
+            if (productList != null)
+            {
+                foreach (var item in productList.data)
+                {
+                    if (item.name.Contains(search.Text))
+                    {
+                        listSearch.Add(item);
+                    }
+                }
+                ProductList.ItemsSource = listSearch;
+            }
+        }
+
+        private async void search_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (search.Text == "")
+            {
+                CategoryDetail catDetail = await categoryServices.CategoryDetail(CatDetail.id);
+                ProductList.ItemsSource = catDetail.data.foods;
+            }
+        }
+
+        private async void FontIconUp_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            List<Product> listSearch = new List<Product>();
+            CategoryDetail catDetail = await categoryServices.CategoryDetail(CatDetail.id);
+
+            if (catDetail != null)
+            {
+                foreach (var item in catDetail.data.foods)
+                {
+                    listSearch.Add(item);
+                }
+                ProductList.ItemsSource = listSearch.OrderBy(K => K.price).ToList();
+            }
+
+        }
+
+        private async void FontIconDown_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            List<Product> listSearch = new List<Product>();
+            CategoryDetail catDetail = await categoryServices.CategoryDetail(CatDetail.id);
+
+            if (catDetail != null)
+            {
+                foreach (var item in catDetail.data.foods)
+                {
+                    listSearch.Add(item);
+                }
+                ProductList.ItemsSource = listSearch.OrderByDescending(K => K.price).ToList();
+            }
+
+        }
     }
 }

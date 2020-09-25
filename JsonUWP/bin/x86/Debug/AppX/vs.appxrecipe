@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2020-09-25T06:03:30.642</Modified>
+      <Modified>2020-09-25T06:46:22.870</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\JsonUWP.exe">
       <PackagePath>entrypoint\JsonUWP.exe</PackagePath>
-      <Modified>2020-09-25T06:03:29.575</Modified>
+      <Modified>2020-09-25T06:46:21.294</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\G7\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -110,35 +110,35 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\JsonUWP.xr.xml">
       <PackagePath>JsonUWP.xr.xml</PackagePath>
-      <Modified>2020-09-23T09:52:32.214</Modified>
+      <Modified>2020-09-25T06:42:47.321</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2020-09-25T06:03:29.326</Modified>
+      <Modified>2020-09-25T06:42:47.379</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2020-09-25T06:03:29.326</Modified>
+      <Modified>2020-09-25T06:42:47.379</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\Pages\Carts.xbf">
       <PackagePath>Pages\Carts.xbf</PackagePath>
-      <Modified>2020-09-25T06:03:29.326</Modified>
+      <Modified>2020-09-25T06:42:47.379</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\Pages\Category.xbf">
       <PackagePath>Pages\Category.xbf</PackagePath>
-      <Modified>2020-09-25T06:03:29.326</Modified>
+      <Modified>2020-09-25T06:46:20.971</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\Pages\Favourite.xbf">
       <PackagePath>Pages\Favourite.xbf</PackagePath>
-      <Modified>2020-09-25T06:03:29.326</Modified>
+      <Modified>2020-09-25T06:42:47.379</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\Pages\Home.xbf">
       <PackagePath>Pages\Home.xbf</PackagePath>
-      <Modified>2020-09-25T06:03:29.326</Modified>
+      <Modified>2020-09-25T06:42:47.380</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\Pages\ProductDetail.xbf">
       <PackagePath>Pages\ProductDetail.xbf</PackagePath>
-      <Modified>2020-09-25T06:03:29.327</Modified>
+      <Modified>2020-09-25T06:42:47.380</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -150,7 +150,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\G7\Documents\JsonUWP\JsonUWP\bin\x86\Debug\Core\JsonUWP.exe">
       <PackagePath>JsonUWP.exe</PackagePath>
-      <Modified>2020-09-25T06:03:30.631</Modified>
+      <Modified>2020-09-25T06:46:22.854</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
